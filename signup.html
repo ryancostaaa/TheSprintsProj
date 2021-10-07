@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up</title>
+</head>
+<body>
+<h3>Username/Email and Password required</h3>
+<h4>Make sure your password has at least 1 capital letter, 1 number, and 1 symbol</h4>
+<form action="signup.php" method="POST">
+    <table>
+        <tr><td>Name:</td><td><input type="text" placeholder="Name" name="Name" id="Name"></td></tr>
+        <tr><td>Username:</td><td><input type="text" placeholder="Username" name="Username" id="Username"></td></tr>
+        <tr><td>Email:</td><td><input type="email" placeholder="Email" name="Email" id="Email"></td></tr>
+        <tr><td>Confirm Email:</td><td><input type="email" placeholder="Confirm Email" name="ConfirmEmail" id="ConfirmEmail"></td></tr>
+        <tr><td>Password:</td><td><input type="password" placeholder="Password" name="Password" id="Password"></td></tr>
+        <tr><td>Confirm Password:</td><td><input type="password" placeholder="Confirm Password" name="ConfirmPassword" id="ConfirmPassword"></td></tr>
+
+        <tr><td>Options:</td><td>
+	
+    <input type="submit" value="Finish Sign Up" name="button" id="Button"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+<script>
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    query = decodeURIComponent(query);
+    var vars = query.split("&");  //%26 is &
+    for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");  //%3D is =
+		if(pair[0] == variable){
+			return pair[1];
+		}
+    }
+    return("");  //return(false);
+}
+
+var ib = getQueryVariable("tbl_signup");
+	if(ib==""){
+		document.getElementById('tbl_signup').value = "No value provided.";
+	}
+	else{
+	    document.getElementById('tbl_signup').value = ib;
+	}
+
+var ib = getQueryVariable("Name");
+	document.getElementById('Name').value = ib;
+
+var ib = getQueryVariable("Username");
+	while(ib.includes("+")){
+		ib = ib.replace('+',' ',ib);
+	}
+	document.getElementById('Username').value = ib;
+
+
+
+var ib = getQueryVariable("Email");
+	while(ib.includes("+")){
+		ib = ib.replace('+',' ',ib);
+	}
+	document.getElementById('Email').value = ib;
+
+var ib = getQueryVariable("Password");
+	while(ib.includes("+")){
+		ib = ib.replace('+',' ',ib);
+	}
+	document.getElementById('Password').value = ib;
+
+
+
+
+
+</script>
