@@ -1,21 +1,25 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta charset="utf-8" />
+    
     <title>Sign Up</title>
 </head>
 <body>
+	<style>body {
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: deepskyblue;
+	  }</style>
 <h3>Username/Email and Password required</h3>
-<h4>Make sure your password has at least 1 capital letter, 1 number, and 1 symbol</h4>
+<h4>Make sure your password has at least 8 characters, consisting of 1 capital letter, 1 number, and 1 symbol</h4>
 <form action="signup.php" method="POST">
     <table>
         <tr><td>Name:</td><td><input type="text" placeholder="Name" name="Name" id="Name"></td></tr>
         <tr><td>Username:</td><td><input type="text" placeholder="Username" name="Username" id="Username"></td></tr>
         <tr><td>Email:</td><td><input type="email" placeholder="Email" name="Email" id="Email"></td></tr>
         <tr><td>Confirm Email:</td><td><input type="email" placeholder="Confirm Email" name="ConfirmEmail" id="ConfirmEmail"></td></tr>
-        <tr><td>Password:</td><td><input type="password" placeholder="Password" name="Password" id="Password"></td></tr>
-        <tr><td>Confirm Password:</td><td><input type="password" placeholder="Confirm Password" name="ConfirmPassword" id="ConfirmPassword"></td></tr>
+        <tr><td>Password:</td><td><input type="password" placeholder="Password" name="Password" id="Password" minlength="8" required></td></tr>
+        <tr><td>Confirm Password:</td><td><input type="password" placeholder="Confirm Password" name="ConfirmPassword" id="ConfirmPassword" minlength="8" required></td></tr>
 
         <tr><td>Options:</td><td>
 	
