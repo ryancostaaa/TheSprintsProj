@@ -1,0 +1,15 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"490frontend"},
+{"type":"table","name":"tbl_login","database":"490frontend","data":
+[
+
+]
+}
+,{"type":"table","name":"tbl_signup","database":"490frontend","data":
+[
+{"Name":"test","Username":"anothertest","Email":"a@a","Password":"bruhbruh"},
+{"Name":"spongebob","Username":"spongebob","Email":"spongebob@yahoo.com","Password":"patrickstar"}
+]
+}
+]
