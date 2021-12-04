@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     
     <title>Sign Up</title>
@@ -12,11 +12,12 @@
 	  }</style>
 <h3>Username/Email and Password required</h3>
 <h4>Make sure your password has at least 8 characters, consisting of 1 capital letter, 1 number, and 1 symbol</h4>
+
 <form action="signup.php" method="POST">
     <table>
         <tr><td>Name:</td><td><input type="text" placeholder="Name" name="Name" id="Name"></td></tr>
         <tr><td>Username:</td><td><input type="text" placeholder="Username" name="Username" id="Username"></td></tr>
-        <tr><td>Email:</td><td><input type="email" placeholder="Email" name="Email" id="Email"></td></tr>
+        <tr><td>Email:</td><td><input type="email" placeholder="Email" name="Email" id="Email" pattern = [A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/></td></tr>
         <tr><td>Confirm Email:</td><td><input type="email" placeholder="Confirm Email" name="ConfirmEmail" id="ConfirmEmail"></td></tr>
         <tr><td>Password:</td><td><input type="password" placeholder="Password" name="Password" id="Password" minlength="8" required></td></tr>
         <tr><td>Confirm Password:</td><td><input type="password" placeholder="Confirm Password" name="ConfirmPassword" id="ConfirmPassword" minlength="8" required></td></tr>
@@ -27,11 +28,19 @@
             </td>
         </tr>
     </table>
+	
+</form>
+<form action="login.html" method="GET">
+	
+    <input type="submit" value="Back to Log In" name="button" id="Button"/>
 </form>
 
 </body>
+
 </html>
+
 <script>
+	
 function getQueryVariable(variable)
 {
     var query = window.location.search.substring(1);

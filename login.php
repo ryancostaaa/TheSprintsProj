@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 	require_once('./configure.php');
-
+	
 	$Username = $_POST['Username'];
 	$Password = $_POST['Password'];
 	$Email=$_POST['Email'];
@@ -15,7 +15,7 @@ session_start();
 		$_SESSION["Email"]=$row['Email'];
 		
 	
-		
+		echo $_SESSION['Username'];
 		echo "I *think* you logged in idk<br/>";
 		echo "<form action='./home.html' method='get'><input type='submit' value='Go to Home Page'/></form>";
 	
@@ -24,5 +24,6 @@ session_start();
 		echo "Could not login, try again.";
 		
 	}
+	
 
      ?>

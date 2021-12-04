@@ -23,7 +23,7 @@ if(!empty($Name) && !empty($Username)  && !empty($Email)  && !empty($Password)){
         echo "<form action='./login.html' method='get'><input type='submit' value='Go Back to Login Page'/></form>";
         clean_all_processes();
     }
-    $sql = "INSERT INTO tbl_signup (Name, Username, Email, Password) VALUES ('$Name', '$Username', '$Email', '$Password')";
+    $sql = "INSERT INTO user (Name, Username, Email, Password) VALUES ('$Name', '$Username', '$Email', '$Password')";
     
     mysqli_query($conn,$sql);
     
